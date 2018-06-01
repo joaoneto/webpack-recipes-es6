@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "João Neto <joaopintoneto@gmail.com>",
   "main": "index.js",
-  "devDependencies": {
+  "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
