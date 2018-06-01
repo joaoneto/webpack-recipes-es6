@@ -1,18 +1,19 @@
-# Webpack devserver App example
+# Webpack Recipes for es6 transpile
 
-### Download:
+Esta é uma receita padrão para compilar projetos es6
+
+Deve ser instalado
+- webpack-recipes para usar receitas webpack
 ```shell
-git clone git@github.com:joaoneto/webpack-recipes-example.git
+npm install --save-dev webpack-recipes
 ```
 
-
-### Instalação:
+- webpack-recipes-devserver para iniciar um servidor em modo de desenvolvimento
 ```shell
-npm install
+npm install --save-dev git+https://github.com/joaoneto/webpack-recipes-devserver.git\#master
 ```
 
-
-### Rodar app:
+- webpack-recipes-es6 para executar o build na pasta ./dist
 ```shell
-npm start
+npm install --save-dev git+https://github.com/joaoneto/webpack-recipes-es6.git\#master
 ```
