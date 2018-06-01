@@ -1,0 +1,21 @@
+{
+  "name": "webpack-recipes-es6",
+  "version": "0.0.1",
+  "description": "Webpack Recipes for es6 transpile",
+  "license": "MIT",
+  "author": "João Neto <joaopintoneto@gmail.com>",
+  "main": "index.js",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.6.0",
+    "webpack-recipes": "^0.0.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack-recipes-devserver": "git+https://github.com/joaoneto/webpack-recipes-devserver.git#master"
+  }
+}
