@@ -16,13 +16,8 @@ module.exports.recipe = {
         default: 'development'
       }
     },
-    handler: (argv) => {
+    handler: (argv, webpackConfig) => {
       console.log('Initializing build...\n');
-    }
-  },
-  hooks: {
-    before: () => {},
-    after: (webpackConfig) => {
       const compiler = webpack(webpackConfig);
       compiler.run((err, stats) => {
         if (err) process.stderr.write(err.toString() + '\n');
