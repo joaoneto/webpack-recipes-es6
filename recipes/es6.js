@@ -1,3 +1,4 @@
+const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -28,6 +29,12 @@ module.exports.recipe = {
 };
 
 module.exports.webpackConfig = function (argv) {
+  let babelOptions = { presets: ['es2015', 'stage-0'] };
+
+  if (fs.existsSync(path.resolve(process.cwd(), '.babelrc'))) {
+    babelOptions = { presets: ['env'] };
+  }
+
   return {
     target: 'web',
 
@@ -36,7 +43,7 @@ module.exports.webpackConfig = function (argv) {
     devtool: 'source-map',
 
     entry: {
-      app: path.resolve('./src/index.js')
+      app: path.resolve('./app/index.js')
     },
 
     output: {
@@ -63,9 +70,7 @@ module.exports.webpackConfig = function (argv) {
           loaders: [
             {
               loader: 'babel-loader',
-              options: {
-                presets: ['env']
-              }
+              options: babelOptions
             }
           ]
         }
@@ -90,7 +95,7 @@ module.exports.webpackConfig = function (argv) {
     plugins: [
       new HtmlWebpackPlugin({
         chunks: ['app'],
-        template: './src/index.html'
+        template: './app/index.html'
       }),
     ],
 
